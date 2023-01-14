@@ -8,6 +8,7 @@
 :root {
     --white-color: #FFFFFF;
     --primary-color: #FF900E;
+    --bg-banner: rgba(255, 144, 14, 0.1);
     --bold-text-color: #131313;
     --p-text-color: #727272;
     --primary-font: 'Work Sans', sans-serif;
@@ -15,7 +16,7 @@
 .container {
     padding: 0 25px;
     width: 100%;
-    max-width: 1400px;
+    max-width: 1440px;
     margin: 0 auto;
 }
 body {
@@ -31,10 +32,10 @@ h2.heading {
     width: 80%;
 }
 .text {
-    font-size: 16px;
-    line-height: 24px;
+    font-size: 18px;
+    line-height: 28px;
     color: var(--p-text-color);
-    padding-bottom: 32px;
+    padding-bottom: 28px;
 }
 
 .btn {
@@ -60,9 +61,9 @@ h2.heading {
 nav {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-around;
     height: 80px;
-    
+    background-color: var(--bg-banner);
 }
 nav > ul {
     display: flex;
@@ -73,7 +74,7 @@ nav > ul {
 
 /**------------- BANNER SECTION -------------**/
 .header {
-    background-color: rgba(255, 144, 14, 0.1);
+    background-color: var(--bg-banner);
     text-align: center;
     padding-bottom: 40px;
 }
@@ -91,26 +92,29 @@ nav > ul {
 }
 .banner_info p {
     padding-bottom: 50px;
-    font-size: 16px;
+    font-size: 18px;
     line-height: 26px;
     color: var(--p-text-color)
 }
 
-
 /**------------- FEATURED SECTION -------------**/
-.featues {
-    gap: 60px;
-    align-items: center;
-    padding: 85px 0 130px;
-}
+
 .featues, .gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-
+.featues {
+    align-items: center;
+    gap: 75px;
+    padding: 85px 0 130px;
+}
 .gallery {
     row-gap: 20px;
     column-gap: 20px;
+}
+.gallery img{
+    width: 100%;
+    object-fit: cover;
 }
 .gallery_note .heading {
     font-weight: 500;
@@ -119,28 +123,39 @@ nav > ul {
     color: var(--p-text-color)
 }
 .gallery_note .text {
-    font-size: 16px;
+    font-size: 18px;
     line-height: 26px;
     color: var(--p-text-color)
 }
 
 /**------------- FAQS SECTION -------------**/
-.faqs_container {
-    padding-bottom: 150px;
-}
 .faqs {
     display: grid;
-    grid-template-columns: 1fr 50px 1fr;
-    align-items: center;
-    gap: 30px;
+    grid-template-columns: 1fr 1fr;
+    align-items: flex-start;
+    gap: 120px;
+}
+.faq_heading .heading {
+    border-left: 5px solid var(--primary-color);
+    padding-left: 20px;
+    padding-bottom: 0;
+}
+.faq_heading .text {
+    margin-top: 24px;
 }
 
 .question_answer {
     background: #FFFFFF;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);
     border-radius: 8px;
-    padding: 30px 40px;
-    margin-bottom: 30px;
+    padding: 20px 30px;
+    margin-bottom: 20px;
+    
+}
+.question_answer .question {
+    font-size: 20px;
+    padding-bottom: 10px;
+    color: var(--bold-text-color);
     
 }
 .experience {
@@ -149,12 +164,15 @@ nav > ul {
     padding: 46px 40px;
     border-radius: 8px;
     width: 340px;
-    z-index: 10;
-    margin-top: 900px;
+    position: relative;
+    top: -225px;
+    left: 45%;
+    line-height: 70px;
     text-align: center;
 }
 .experience h2 {
-    font-size: 55px;
+    font-weight: 700;
+    font-size: 65px;
     line-height: 70px;
 }
 .experience p {
@@ -162,10 +180,8 @@ nav > ul {
     font-size: 25px;
     line-height: 40px;
 }
-
-.faq_image {
-    width: 708px;
-    height: 982px;
+.faq_image img {
+    width: 100%;
     object-fit: cover;
 }
 
@@ -180,15 +196,32 @@ nav > ul {
     gap: 100px;
     margin-top: 60px;
 }
+.achievements_icon img {
+    padding-bottom: 20px;
+}
 .achievements_card {
     background: transparent;
     border: 1px solid var(--primary-color);
     border-radius: 8px;
     padding: 45px 36px;
+    transition: all 600ms ease-in-out;
+}
+.achievements_card h3 {
+    font-weight: 600;
+    font-size: 45px;
+    color: var(--bold-text-color);
+    padding-bottom: 5px;
+}
+.achievements_card p {
+    font-weight: 600;
+    font-size: 20px;
+    color: var(--p-text-color);
 }
 
 .achievements_card:hover {
-    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2);
+    box-shadow: 50px 50px 50px rgba(0, 0, 0, 0.1);
+    transform: translateY(50px) scale(0.5) rotate(360deg);
+
 }
 
 /**------------- BRANDS SECTION -------------**/
@@ -199,7 +232,57 @@ nav > ul {
 .brand_logo {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
-    color: #131313;
+    color: var(--bold-text-color);
     margin: 30px 0 110px;
+    filter: grayscale(100%);
+}
+
+/**------------- FOOTER SECTION -------------**/
+.footer {
+    text-align: center;
+    background: #FFF4E7;
+    border-radius: 8px;
+    height: 100px;
+    margin-bottom: 215px;
+}
+.footer_copyright {
+    font-size: 20px;
+    color: var(--p-text-color);
+    justify-content: center;
+    padding: 44px 0;
+}
+
+/** MEDIA QUERY FOR SMALL DEVICE **/
+
+@media only screen and (max-width: 660PX) {
+    .container {
+        width: 100%;
+    }
+    nav, .header {
+        width: 100%;
+    }
+    .figure > img {
+        width: 100%;
+    }
+    .faqs {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .experience {
+        top: -125px;
+        left: 38%;
+    }
+    .achievements_cards, .featues, .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        flex-direction: column;
+    }
+    .featues {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .brand_logo {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        row-gap: 18px;
+        
+    }
+
 }
