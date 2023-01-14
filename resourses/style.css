@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --bg-color: #1E1E1E;
+    --primary-color: #FF900E;
+    --bold-text-color: #131313;
+    --primary-font: 'Work Sans', sans-serif;
+}
+.container {
+    padding: 0 25px;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+body {
+    background-color: var(--bg-color);
+    font-family: var(--primary-font);
+}
