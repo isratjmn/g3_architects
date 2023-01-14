@@ -2,11 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
 }
 :root {
-    --bg-color: #1E1E1E;
+    --white-color: #FFFFFF;
     --primary-color: #FF900E;
     --bold-text-color: #131313;
+    --p-text-color: #727272;
     --primary-font: 'Work Sans', sans-serif;
 }
 .container {
@@ -18,4 +21,185 @@
 body {
     background-color: var(--bg-color);
     font-family: var(--primary-font);
+}
+h2.heading {
+    font-weight: 700;
+    font-size: 45px;
+    line-height: 53px;
+    color: var(--bold-text-color);
+    padding-bottom: 24px;
+    width: 80%;
+}
+.text {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--p-text-color);
+    padding-bottom: 32px;
+}
+
+.btn {
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 16px 32px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 18px;
+    cursor: pointer;
+}
+.btn:hover {
+    background: transparent;
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+}
+/**------------- NAVBAR -------------**/
+.logo {
+    font-weight: 700;
+    font-size: 30px;
+}
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    
+}
+nav > ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    font-size: 18px;
+}
+
+/**------------- BANNER SECTION -------------**/
+.header {
+    background-color: rgba(255, 144, 14, 0.1);
+    text-align: center;
+    padding-bottom: 40px;
+}
+.banner_info {
+    text-align: center;
+    padding: 100px 0 100px;
+}
+.banner_info h1 {
+    font-weight: 700;
+    font-size: 64px;
+    text-align: center;
+    color: #131313;
+    line-height: 75px;
+    padding-bottom: 25px;
+}
+.banner_info p {
+    padding-bottom: 50px;
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--p-text-color)
+}
+
+
+/**------------- FEATURED SECTION -------------**/
+.featues {
+    gap: 60px;
+    align-items: center;
+    padding: 85px 0 130px;
+}
+.featues, .gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.gallery {
+    row-gap: 20px;
+    column-gap: 20px;
+}
+.gallery_note .heading {
+    font-weight: 500;
+    font-size: 45px;
+    line-height: 53px;
+    color: var(--p-text-color)
+}
+.gallery_note .text {
+    font-size: 16px;
+    line-height: 26px;
+    color: var(--p-text-color)
+}
+
+/**------------- FAQS SECTION -------------**/
+.faqs_container {
+    padding-bottom: 150px;
+}
+.faqs {
+    display: grid;
+    grid-template-columns: 1fr 50px 1fr;
+    align-items: center;
+    gap: 30px;
+}
+
+.question_answer {
+    background: #FFFFFF;
+    box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    padding: 30px 40px;
+    margin-bottom: 30px;
+    
+}
+.experience {
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 46px 40px;
+    border-radius: 8px;
+    width: 340px;
+    z-index: 10;
+    margin-top: 900px;
+    text-align: center;
+}
+.experience h2 {
+    font-size: 55px;
+    line-height: 70px;
+}
+.experience p {
+    font-weight: 500;
+    font-size: 25px;
+    line-height: 40px;
+}
+
+.faq_image {
+    width: 708px;
+    height: 982px;
+    object-fit: cover;
+}
+
+/**------------- FACTS SECTION -------------**/
+.fact_content {
+    padding-bottom: 160px;
+}
+.achievements_cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    gap: 100px;
+    margin-top: 60px;
+}
+.achievements_card {
+    background: transparent;
+    border: 1px solid var(--primary-color);
+    border-radius: 8px;
+    padding: 45px 36px;
+}
+
+.achievements_card:hover {
+    box-shadow: 0 50px 50px rgba(0, 0, 0, 0.2);
+}
+
+/**------------- BRANDS SECTION -------------**/
+.brand_heading h2, .brand_heading p {
+    text-align: center;
+    margin: 0 auto;
+}
+.brand_logo {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    color: #131313;
+    margin: 30px 0 110px;
 }
