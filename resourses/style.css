@@ -75,7 +75,7 @@ nav {
     display: flex;
     align-items: center;
     justify-content: space-around;
-    height: 80px;
+    height: 85px;
     background-color: var(--bg-banner);
 }
 nav > ul {
@@ -358,7 +358,7 @@ form .btn {
 
 /**------------- MEDIA QUERY FOR SMALL DEVICE -------------**/
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 600px) {
     .container, 
     nav, .header,
     .facts_heading .text, 
@@ -386,9 +386,10 @@ form .btn {
         grid-template-columns: repeat(1, 1fr);
     }
     .experience {
-    top: -100px;
-    left: 0;
-    padding: 28px 20px;
+        width: 260px;
+        top: -100px;
+        left: 0;
+        padding: 28px 20px;
     }
     .experience h2 {
         font-size: 50px;
@@ -444,15 +445,12 @@ form .btn {
 /**------------- END OF MEDIA QUERY FOR SMALL DEVICE -------------**/
 
 /**------------ MEDIA QUERY FOR TABLET DEVICES ----------**/
-@media only screen and (min-width: 651px) and (max-width: 992px) {
+@media only screen and (max-width: 992px) {
     .container,
     .figure > img,
     .facts_heading .text, 
     .brand_heading .text {
         width: 100%;
-    }
-    .experience {
-        display: none;
     }
     .faqs {
         grid-template-columns: 1fr;
