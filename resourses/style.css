@@ -22,10 +22,10 @@
     max-width: 1440px;
     margin: 0 auto;
 }
+
 body {
     background-color: var(--bg-color);
     font-family: var(--primary-font);
-    overflow-x: hidden;
 }
 h2.heading {
     font-weight: 700;
@@ -368,7 +368,7 @@ form .btn {
     .brand_heading .text, 
     .figure > img, 
     form input[type="text"] {
-        max-width: 100%;
+        width: 100%;
     }
     h2.heading {
         font-size: 34px;
@@ -413,6 +413,7 @@ form .btn {
         display: grid;
         grid-template-columns: repeat(2,1fr);
         row-gap: 20px; 
+        margin-bottom: 80px;
     }
     .banner_info h1 {
         font-size: 54px;
