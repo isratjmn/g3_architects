@@ -139,7 +139,7 @@ nav > ul {
 /**------------- FAQS SECTION -------------**/
 .faqs {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
     align-items: flex-start;
     gap: 120px;
 }
@@ -188,7 +188,7 @@ nav > ul {
     font-size: 25px;
     line-height: 40px;
 }
-.faq_image img {
+.faq_image > img {
     width: 100%;
     object-fit: cover;
 }
@@ -242,12 +242,11 @@ nav > ul {
 .brand_logo {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
     color: var(--bold-text-color);
     margin: 30px 0 180px;
     filter: grayscale(100%);
 }
-
-
 
 /**------------- CONTACT FORM SECTION -------------**/
 .contact {
@@ -273,7 +272,7 @@ nav > ul {
 }
 
 .aside_image img {
-    width: 420px;
+    width: 90%;
     border-radius: 8px;
     margin-bottom: 30px;
 }
@@ -301,15 +300,12 @@ nav > ul {
     gap: 15px;
     margin-top: 25px;
 }
-
-
 form {
     display: flex;
     flex-direction: column;
     gap: 20px;
     margin-right: 120px;
 }
-
 .form_name {
     display: flex;
     gap: 20px;
@@ -349,26 +345,30 @@ form .btn {
 /** MEDIA QUERY FOR SMALL DEVICE **/
 
 @media only screen and (max-width: 650px) {
-    .container, .facts_heading .text, 
-    .brand_heading .text {
+    .container, 
+    nav, .header,
+    .facts_heading .text, 
+    .brand_heading .text, 
+    .figure > img, 
+    form input[type="text"] {
         width: 100%;
     }
-    
-    nav, .header {
-        width: 100%;
+    h2.heading {
+        font-size: 36px;
     }
     nav {
         flex-direction: column;
     }
-    .figure > img {
-        width: 100%; 
+    .features {
+        display: flex;
+        flex-direction: column-reverse;
+        padding: 80px 20px;
     }
-    .faqs {
+    .faqs, .features {
         grid-template-columns: repeat(1, 1fr);
     }
     .experience {
-        top: -125px;
-        left: 38%;
+        display: none;
     }
     .faq_image img {
         padding-right: 30px;
@@ -377,19 +377,18 @@ form .btn {
         grid-template-columns: repeat(2, 1fr);
         column-gap: 30px;
     }
-    .features {
-        grid-template-columns: repeat(1, 1fr);
-    }
     .brand_logo {
         display: grid;
         grid-template-columns: repeat(2,1fr);
-        row-gap: 18px;
-        margin: 70px 0;
+        row-gap: 20px;
+        
+    }
+    .brand_logo >img {
+        width: 80%;
     }
     .contact {
         padding-bottom: 40px;
     }
-
     .contact_container {
         grid-template-columns: 1fr;
         row-gap: 40px;
@@ -403,19 +402,48 @@ form .btn {
         bottom: 30px;
         margin: 0;
     }
-
     form {
         margin: 0 25px 50px;
     }
-
     .form_name {
         flex-direction: column;
-    }
-    form input[type="text"] {
-        width: 100%;
     }
     .footer {
         margin-bottom: 100px;
     }
-
 }
+
+/**------------ TABLET DEVICES ----------**/
+@media only screen and (min-width: 651px) and (max-width: 992px) {
+    .container,
+     .figure > img,
+     .facts_heading .text, 
+    .brand_heading .text {
+        width: 100%;
+    }
+    .experience {
+        display: none;
+    }
+    .faqs {
+        grid-template-columns: 1fr;
+    }
+    /* .qna {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    } */
+    .achievements_cards{
+        column-gap: 20px;
+    }
+    .brand_logo > img {
+        width: 150px;
+    }
+    .faq_image img {
+        margin-bottom: 50px;
+    }
+    .contact_container {
+        
+        grid-template-columns: 50% 65%;
+        gap: 20px;
+        height: 500px;
+    }
+    
