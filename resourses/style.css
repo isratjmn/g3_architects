@@ -459,6 +459,12 @@ form .btn {
     .brand_heading .text {
         width: 100%;
     }
+    nav {
+        padding-top: 100px;
+    }
+    nav > ul {
+        flex-direction: column;
+    }
     .faqs {
         grid-template-columns: 1fr;
     }
