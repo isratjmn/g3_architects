@@ -28,7 +28,7 @@ h2.heading {
     font-size: 45px;
     line-height: 53px;
     color: var(--bold-text-color);
-    padding-bottom: 24px;
+    padding-bottom: 20px;
     width: 80%;
 }
 .text {
@@ -36,6 +36,9 @@ h2.heading {
     line-height: 28px;
     color: var(--p-text-color);
     padding-bottom: 28px;
+}
+.facts_heading .text, .brand_heading .text {
+    width: 45%;
 }
 
 .btn {
@@ -52,6 +55,11 @@ h2.heading {
     background: transparent;
     color: var(--primary-color);
     border-color: var(--primary-color);
+}
+
+a {
+    color: var(--bold-text-color);
+    font-size: 18px;
 }
 /**------------- NAVBAR -------------**/
 .logo {
@@ -99,11 +107,11 @@ nav > ul {
 
 /**------------- FEATURED SECTION -------------**/
 
-.featues, .gallery {
+.features, .gallery {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
 }
-.featues {
+.features {
     align-items: center;
     gap: 75px;
     padding: 85px 0 130px;
@@ -148,13 +156,13 @@ nav > ul {
     background: #FFFFFF;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);
     border-radius: 8px;
-    padding: 20px 30px;
+    padding: 20px 30px 15px;
     margin-bottom: 20px;
     
 }
 .question_answer .question {
     font-size: 20px;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     color: var(--bold-text-color);
     
 }
@@ -165,8 +173,8 @@ nav > ul {
     border-radius: 8px;
     width: 340px;
     position: relative;
-    top: -225px;
-    left: 45%;
+    top: -250px;
+    left: 48%;
     line-height: 70px;
     text-align: center;
 }
@@ -189,6 +197,7 @@ nav > ul {
 .fact_content {
     padding-bottom: 160px;
 }
+
 .achievements_cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -203,7 +212,7 @@ nav > ul {
     background: transparent;
     border: 1px solid var(--primary-color);
     border-radius: 8px;
-    padding: 45px 36px;
+    padding: 45px 25px;
     transition: all 600ms ease-in-out;
 }
 .achievements_card h3 {
@@ -225,6 +234,7 @@ nav > ul {
 }
 
 /**------------- BRANDS SECTION -------------**/
+
 .brand_heading h2, .brand_heading p {
     text-align: center;
     margin: 0 auto;
@@ -233,8 +243,92 @@ nav > ul {
     display: flex;
     justify-content: space-between;
     color: var(--bold-text-color);
-    margin: 30px 0 110px;
+    margin: 30px 0 180px;
     filter: grayscale(100%);
+}
+
+
+
+/**------------- CONTACT FORM SECTION -------------**/
+.contact {
+    padding-bottom: 80px;
+}
+.contact_container {
+    background: var(--bg-banner);
+    padding: 65px;
+    display: grid;
+    grid-template-columns: 40% 55%;
+    gap: 150px;
+    height: 500px;
+    margin: 115px auto;
+    border-radius: 15px;
+}
+.contact_aside {
+    background: var(--primary-color);
+    padding: 80px 20px;
+    border-radius: 15px;
+    position: relative;
+    bottom: 150px;
+    margin: 20px;
+}
+
+.aside_image img {
+    width: 420px;
+    border-radius: 8px;
+    margin-bottom: 30px;
+}
+
+.contact_aside h2 {
+    margin-bottom: 15px;
+    text-align: left;
+    font-size: 28px;
+}
+
+.contact_aside p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.contact_details li {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.contact_socials {
+    display: flex;
+    gap: 15px;
+    margin-top: 25px;
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-right: 120px;
+}
+
+.form_name {
+    display: flex;
+    gap: 20px;
+}
+form input[type="text"] {
+    width: 50%;
+}
+input,
+textarea {
+    padding: 18px;
+    background: transparent;
+    color: var(--p-text-color);
+    border-radius: 5px;
+    width: 100%;
+}
+form .btn {
+    width: max-content;
+    cursor: pointer;
+    margin-top: 15px;
 }
 
 /**------------- FOOTER SECTION -------------**/
@@ -246,7 +340,7 @@ nav > ul {
     margin-bottom: 215px;
 }
 .footer_copyright {
-    font-size: 20px;
+    font-size: 18px;
     color: var(--p-text-color);
     justify-content: center;
     padding: 44px 0;
@@ -254,15 +348,20 @@ nav > ul {
 
 /** MEDIA QUERY FOR SMALL DEVICE **/
 
-@media only screen and (max-width: 660PX) {
-    .container {
+@media only screen and (max-width: 650px) {
+    .container, .facts_heading .text, 
+    .brand_heading .text {
         width: 100%;
     }
+    
     nav, .header {
         width: 100%;
     }
+    nav {
+        flex-direction: column;
+    }
     .figure > img {
-        width: 100%;
+        width: 100%; 
     }
     .faqs {
         grid-template-columns: repeat(1, 1fr);
@@ -271,18 +370,52 @@ nav > ul {
         top: -125px;
         left: 38%;
     }
-    .achievements_cards, .featues, .gallery {
-        grid-template-columns: repeat(2, 1fr);
-        flex-direction: column;
+    .faq_image img {
+        padding-right: 30px;
     }
-    .featues {
+    .achievements_cards, .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 30px;
+    }
+    .features {
         grid-template-columns: repeat(1, 1fr);
     }
     .brand_logo {
         display: grid;
         grid-template-columns: repeat(2,1fr);
         row-gap: 18px;
-        
+        margin: 70px 0;
+    }
+    .contact {
+        padding-bottom: 40px;
+    }
+
+    .contact_container {
+        grid-template-columns: 1fr;
+        row-gap: 40px;
+        height: max-content;
+        padding-top: 80px;
+        justify-content: center;
+    }
+    .contact_aside {
+        background: var(--primary-color);
+        border-radius: 8px;
+        bottom: 30px;
+        margin: 0;
+    }
+
+    form {
+        margin: 0 25px 50px;
+    }
+
+    .form_name {
+        flex-direction: column;
+    }
+    form input[type="text"] {
+        width: 100%;
+    }
+    .footer {
+        margin-bottom: 100px;
     }
 
 }

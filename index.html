@@ -13,9 +13,12 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
+    <!----------------- FONT AWESOME CDN ----------------->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
-    <!----------------- NAVBAR  ----------------->
+    <!----------------- NAVBAR ------------------->
     <nav class="nav">
         <h2 class="logo">G3 Architects</h2> 
         <ul>
@@ -25,7 +28,7 @@
             <li><a href="#">Login</a></li>
         </ul>
     </nav>
-    <!----------------- BANNER SECTION  ----------------->
+    <!----------------- BANNER SECTION ----------------->
     <header>
         <div class="header">
             <div class="banner_info">
@@ -40,9 +43,9 @@
     </header>
     <!----------------------- END OF BANNER SECTION -------------------------->
     <main>
-        <!----------------- FEATURED SECTION  ----------------->
+        <!------------------- FEATURED SECTION  ------------------->
         <section>
-            <div class="container featues">
+            <div class="container features">
                 <div class="gallery">
                     <img src="./images/team1.png" alt="gallery_img">
                     <img src="./images/team2.png" alt="gallery_img">
@@ -57,6 +60,7 @@
             </div>
         </section>
         <!----------------- END OF FEATURED SECTION  ----------------->
+
         <!-----------------------  FAQS SECTION  -------------------------->
         <section>
             <div class="container faqs_container">
@@ -87,7 +91,6 @@
                         <div class="faq_image">
                             <img src="./images/architect.png" alt="architect">
                         </div>
-
                     </div>
                     <div class="experience">
                         <h2>10+Year</h2>
@@ -96,6 +99,7 @@
             </div>
         </section>
         <!-----------------------  END OF FAQS SECTION  -------------------------->
+
         <!-----------------------  FACTS SECTION  -------------------------->
         <section>
             <div class="container fact_content">
@@ -130,7 +134,7 @@
             </div>
         </section>
         <!-----------------------  END OF FACTS SECTION-------------------------->
-        <!-----------------------  BRANDS SECTION-------------------------->
+        <!-----------------------  BRANDS SECTION  -------------------------->
         <section>
             <div class="container">
                 <div class="brand_heading">
@@ -147,6 +151,48 @@
             </div>
         </section>
         <!-----------------------  END OF BRANDs SECTION-------------------------->
+
+        <!----------------------- CONTACT FORM SECTION------------------------>
+        <section class="contact">
+            <div class="container contact_container">
+                <aside class="contact_aside">
+                    <div class="aside_image">
+                        <img src="./images/woman-with-architect.jpg">
+                    </div>
+                    <h2> Contact Us </h2>
+                    <p>Architects plan, develop and implement building designs. They compile feasibility reports, determine environmental impact, create project proposals, estimate costs, determine timelines and oversee construction processes.</p>
+                    <ul class="contact_details">
+                        <li>
+                            <i class="fa-solid fa-phone-volume"></i>
+                            <h4>+123 4568 947</h4>
+                        </li>
+                    </ul>
+                    <ul class="contact_details">
+                        <li>
+                            <i class="fa-solid fa-envelope-open"></i>
+                            <h4>support@izmtechz.Com</h4>
+                        </li>
+                    </ul>
+                    <ul class="contact_details">
+                        <li>
+                            <i class="fa-solid fa-map-location"></i>
+                            <h4>Acarra, Ghana </h4>
+                        </li>
+                    </ul>
+                </aside>
+                <form action="#" method="POST">
+                    <div class="form_name">
+                        <input type="text" name="First Name" placeholder="First Name" required>
+                        <input type="text" name="Last Name" placeholder="Last Name" required>
+                    </div>
+                    <input type="email" placeholder="Your Email Address" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message" required></textarea>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </section>
+
+    <!----------------------- END OF CONTACT FORM SECTION------------------------>
     </main>
     <footer class="container footer">
         <div class="footer_copyright">
