@@ -77,6 +77,7 @@ nav {
     justify-content: space-around;
     height: 85px;
     background-color: var(--bg-banner);
+    width: 100%;
 }
 nav > ul {
     display: flex;
@@ -372,6 +373,10 @@ form .btn {
     }
     nav {
         flex-direction: column;
+    }
+    .figure > img {
+        padding: 0 15px;
+        border-radius: 15px;
     }
     .facts_heading .text, 
     .brand_heading .text {
