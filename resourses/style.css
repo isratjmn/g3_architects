@@ -94,6 +94,9 @@ nav > ul {
     background-color: var(--bg-banner);
     text-align: center;
     padding-bottom: 40px;
+    max-width: 100%;
+    overflow-x: hidden;
+
 }
 .banner_info {
     text-align: center;
@@ -358,8 +361,8 @@ form .btn {
 /**------------- MEDIA QUERY FOR SMALL DEVICE -------------**/
 
 @media only screen and (max-width: 600px) {
+    nav,
     .container, 
-    nav, .header,
     .facts_heading .text, 
     .brand_heading .text, 
     .figure > img, 
@@ -453,6 +456,9 @@ form .btn {
 
 /**------------ MEDIA QUERY FOR TABLET DEVICES ----------**/
 @media only screen and (max-width: 992px) {
+    body {
+        overflow-x: hidden;
+    }
     .container,
     .figure > img,
     .facts_heading .text, 
