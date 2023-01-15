@@ -13,6 +13,9 @@
     --p-text-color: #727272;
     --primary-font: 'Work Sans', sans-serif;
 }
+
+/**------------- COMMON UTILITIES -----------------**/
+
 .container {
     padding: 0 25px;
     width: 100%;
@@ -40,7 +43,6 @@ h2.heading {
 .facts_heading .text, .brand_heading .text {
     width: 45%;
 }
-
 .btn {
     background: var(--primary-color);
     color: var(--white-color);
@@ -56,12 +58,15 @@ h2.heading {
     color: var(--primary-color);
     border-color: var(--primary-color);
 }
-
 a {
     color: var(--bold-text-color);
     font-size: 18px;
 }
-/**------------- NAVBAR -------------**/
+
+/**------------- END OF COMMON UTILITIES -----------------**/
+
+/**--------------- NAVBAR -----------------**/
+
 .logo {
     font-weight: 700;
     font-size: 30px;
@@ -80,7 +85,10 @@ nav > ul {
     font-size: 18px;
 }
 
+/**------------- END OF NAVBAR -------------**/
+
 /**------------- BANNER SECTION -------------**/
+
 .header {
     background-color: var(--bg-banner);
     text-align: center;
@@ -104,6 +112,8 @@ nav > ul {
     line-height: 26px;
     color: var(--p-text-color)
 }
+
+/**------------- END OF BANNER SECTION -------------**/
 
 /**------------- FEATURED SECTION -------------**/
 
@@ -136,7 +146,10 @@ nav > ul {
     color: var(--p-text-color)
 }
 
+/**------------- END OF FEATURED SECTION -------------**/
+
 /**------------- FAQS SECTION -------------**/
+
 .faqs {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -193,11 +206,13 @@ nav > ul {
     object-fit: cover;
 }
 
-/**------------- FACTS SECTION -------------**/
-.fact_content {
-    padding-bottom: 160px;
-}
+/**------------- END OF FAQS SECTION -------------**/ 
 
+/**------------- FACTS SECTION -------------**/
+
+.fact_content {
+    padding-bottom: 130px;
+}
 .achievements_cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -231,6 +246,8 @@ nav > ul {
     transform: translateY(50px) scale(0.5) rotate(360deg);
 }
 
+/**------------- END OF FACTS SECTION -------------**/
+
 /**------------- BRANDS SECTION -------------**/
 
 .brand_heading h2, .brand_heading p {
@@ -246,7 +263,10 @@ nav > ul {
     filter: grayscale(100%);
 }
 
-/**------------- CONTACT FORM SECTION -------------**/
+/**------------- END OF BRANDS SECTION -------------**/
+
+/**------------- CONTACT SECTION -------------**/
+
 .contact {
     padding-bottom: 80px;
 }
@@ -268,25 +288,21 @@ nav > ul {
     bottom: 150px;
     margin: 20px;
 }
-
 .aside_image img {
     width: 90%;
     border-radius: 8px;
     margin-bottom: 30px;
 }
-
 .contact_aside h2 {
     margin-bottom: 15px;
     text-align: left;
     font-size: 28px;
 }
-
 .contact_aside p {
     font-size: 16px;
     margin-bottom: 15px;
     text-align: left;
 }
-
 .contact_details li {
     display: flex;
     gap: 15px;
@@ -320,7 +336,10 @@ form .btn {
     margin-top: 15px;
 }
 
+/**------------- END OF CONTACT SECTION -------------**/
+
 /**------------- FOOTER SECTION -------------**/
+
 .footer {
     text-align: center;
     background: #FFF4E7;
@@ -335,7 +354,9 @@ form .btn {
     padding: 44px 0;
 }
 
-/** MEDIA QUERY FOR SMALL DEVICE **/
+/**------------- END OF FOOTER SECTION -------------**/
+
+/**------------- MEDIA QUERY FOR SMALL DEVICE -------------**/
 
 @media only screen and (max-width: 650px) {
     .container, 
@@ -420,9 +441,9 @@ form .btn {
         padding: 36px 0;
     }
 }
+/**------------- END OF MEDIA QUERY FOR SMALL DEVICE -------------**/
 
-
-/**------------ TABLET DEVICES ----------**/
+/**------------ MEDIA QUERY FOR TABLET DEVICES ----------**/
 @media only screen and (min-width: 651px) and (max-width: 992px) {
     .container,
     .figure > img,
@@ -436,7 +457,7 @@ form .btn {
     .faqs {
         grid-template-columns: 1fr;
     }
-    .achievements_cards{
+    .achievements_cards {
         column-gap: 20px;
     }
     .brand_logo > img {
@@ -445,9 +466,4 @@ form .btn {
     .faq_image img {
         margin-bottom: 40px;
     }
-    /* .contact_container {
-        grid-template-columns: 50% 65%;
-        gap: 20px;
-        height: 500px;
-    } */
-    
+}
