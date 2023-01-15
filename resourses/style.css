@@ -25,6 +25,7 @@
 body {
     background-color: var(--bg-color);
     font-family: var(--primary-font);
+    overflow-x: hidden;
 }
 h2.heading {
     font-weight: 700;
@@ -367,7 +368,7 @@ form .btn {
     .brand_heading .text, 
     .figure > img, 
     form input[type="text"] {
-        width: 100%;
+        max-width: 100%;
     }
     h2.heading {
         font-size: 34px;
