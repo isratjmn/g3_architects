@@ -165,21 +165,19 @@ nav > ul {
 .faq_heading .text {
     margin-top: 24px;
 }
-
 .question_answer {
     background: #FFFFFF;
     box-shadow: 0px 4px 30px rgba(0, 0, 0, 0.06);
     border-radius: 8px;
     padding: 20px 30px 15px;
     margin-bottom: 20px;
-    
 }
 .question_answer .question {
     font-size: 20px;
     padding-bottom: 5px;
     color: var(--bold-text-color);
-    
 }
+
 .experience {
     background: var(--primary-color);
     color: var(--white-color);
@@ -381,6 +379,10 @@ form .btn {
     .facts_heading .text, 
     .brand_heading .text {
         font-size: 20px;
+        width: 550px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     .features {
         display: flex;
