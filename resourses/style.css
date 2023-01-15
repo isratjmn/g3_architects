@@ -180,7 +180,7 @@ nav > ul {
 }
 .experience h2 {
     font-weight: 700;
-    font-size: 65px;
+    font-size: 60px;
     line-height: 70px;
 }
 .experience p {
@@ -226,11 +226,9 @@ nav > ul {
     font-size: 20px;
     color: var(--p-text-color);
 }
-
 .achievements_card:hover {
     box-shadow: 50px 50px 50px rgba(0, 0, 0, 0.1);
     transform: translateY(50px) scale(0.5) rotate(360deg);
-
 }
 
 /**------------- BRANDS SECTION -------------**/
@@ -294,12 +292,6 @@ nav > ul {
     gap: 15px;
     margin-bottom: 15px;
 }
-
-.contact_socials {
-    display: flex;
-    gap: 15px;
-    margin-top: 25px;
-}
 form {
     display: flex;
     flex-direction: column;
@@ -318,6 +310,7 @@ textarea {
     padding: 18px;
     background: transparent;
     color: var(--p-text-color);
+    border: 1px solid var(--p-text-color);
     border-radius: 5px;
     width: 100%;
 }
@@ -354,10 +347,14 @@ form .btn {
         width: 100%;
     }
     h2.heading {
-        font-size: 36px;
+        font-size: 34px;
     }
     nav {
         flex-direction: column;
+    }
+    .facts_heading .text, 
+    .brand_heading .text {
+        font-size: 20px;
     }
     .features {
         display: flex;
@@ -368,32 +365,37 @@ form .btn {
         grid-template-columns: repeat(1, 1fr);
     }
     .experience {
-        display: none;
+    top: -100px;
+    left: 0;
+    padding: 28px 20px;
     }
-    .faq_image img {
-        padding-right: 30px;
+    .experience h2 {
+        font-size: 50px;
     }
     .achievements_cards, .gallery {
         grid-template-columns: repeat(2, 1fr);
-        column-gap: 30px;
+        column-gap: 15px;
     }
     .brand_logo {
         display: grid;
         grid-template-columns: repeat(2,1fr);
-        row-gap: 20px;
-        
+        row-gap: 20px; 
     }
-    .brand_logo >img {
+    .banner_info h1 {
+        font-size: 54px;
+    }
+    .brand_logo > img {
         width: 80%;
     }
     .contact {
-        padding-bottom: 40px;
+        padding-bottom: 30px;
     }
     .contact_container {
         grid-template-columns: 1fr;
+        padding: 0 15px;
         row-gap: 40px;
         height: max-content;
-        padding-top: 80px;
+        padding-top: 60px;
         justify-content: center;
     }
     .contact_aside {
@@ -413,11 +415,12 @@ form .btn {
     }
 }
 
+
 /**------------ TABLET DEVICES ----------**/
 @media only screen and (min-width: 651px) and (max-width: 992px) {
     .container,
-     .figure > img,
-     .facts_heading .text, 
+    .figure > img,
+    .facts_heading .text, 
     .brand_heading .text {
         width: 100%;
     }
@@ -427,10 +430,6 @@ form .btn {
     .faqs {
         grid-template-columns: 1fr;
     }
-    /* .qna {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-    } */
     .achievements_cards{
         column-gap: 20px;
     }
@@ -438,12 +437,11 @@ form .btn {
         width: 150px;
     }
     .faq_image img {
-        margin-bottom: 50px;
+        margin-bottom: 40px;
     }
-    .contact_container {
-        
+    /* .contact_container {
         grid-template-columns: 50% 65%;
         gap: 20px;
         height: 500px;
-    }
+    } */
     
