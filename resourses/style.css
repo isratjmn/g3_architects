@@ -141,9 +141,12 @@ nav > ul {
     row-gap: 20px;
     column-gap: 20px;
 }
-.gallery img{
+.gallery img {
     width: 100%;
     object-fit: cover;
+}
+.gallery_note {
+    padding-left: 0;
 }
 .gallery_note .heading {
     font-weight: 500;
@@ -281,7 +284,7 @@ nav > ul {
     grid-template-columns: 40% 55%;
     gap: 150px;
     height: 500px;
-    margin: 115px auto;
+    margin: 90px auto;
     border-radius: 15px;
 }
 .contact_aside {
@@ -378,8 +381,8 @@ form .btn {
         padding: 0 15px;
         border-radius: 15px;
     }
-    .facts_heading .text, 
-    .brand_heading .text {
+    
+    .note .text {
         font-size: 20px;
         width: 320px;
         white-space: nowrap;
@@ -389,7 +392,7 @@ form .btn {
     .features {
         display: flex;
         flex-direction: column-reverse;
-        padding: 80px 0;
+        padding: 80px 15px;
     }
     .faqs, .features {
         grid-template-columns: repeat(1, 1fr);
@@ -428,11 +431,11 @@ form .btn {
     }
     .contact_container {
         grid-template-columns: 1fr;
-        padding: 0 15px;
+        padding: 60px 15px 0;
         row-gap: 40px;
         height: max-content;
-        padding-top: 60px;
         justify-content: center;
+        margin: 60px auto;
     }
     .contact_aside {
         background: var(--primary-color);
