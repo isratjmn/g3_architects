@@ -41,9 +41,15 @@ h2.heading {
     color: var(--p-text-color);
     padding-bottom: 28px;
 }
-.facts_heading .text, .brand_heading .text {
+.note > p, 
+.note > h2 {
+    text-align: center;
+    margin: 0 auto;
+}
+.note > p {
     width: 45%;
 }
+
 .btn {
     background: var(--primary-color);
     color: var(--white-color);
@@ -161,12 +167,12 @@ nav > ul {
     align-items: flex-start;
     gap: 120px;
 }
-.faq_heading .heading {
+.faq_heading > h2 {
     border-left: 5px solid var(--primary-color);
     padding-left: 20px;
     padding-bottom: 0;
 }
-.faq_heading .text {
+.faq_heading > p {
     margin-top: 24px;
 }
 .question_answer {
@@ -181,7 +187,6 @@ nav > ul {
     padding-bottom: 5px;
     color: var(--bold-text-color);
 }
-
 .experience {
     background: var(--primary-color);
     color: var(--white-color);
@@ -253,10 +258,6 @@ nav > ul {
 
 /**------------- BRANDS SECTION -------------**/
 
-.brand_heading h2, .brand_heading p {
-    text-align: center;
-    margin: 0 auto;
-}
 .brand_logo {
     display: flex;
     justify-content: space-between;
@@ -291,15 +292,10 @@ nav > ul {
     bottom: 150px;
     margin: 20px;
 }
-.aside_image img {
+.aside_image > img {
     width: 90%;
     border-radius: 8px;
     margin-bottom: 30px;
-}
-.contact_aside h2 {
-    margin-bottom: 15px;
-    text-align: left;
-    font-size: 28px;
 }
 .contact_aside p {
     font-size: 16px;
@@ -341,7 +337,7 @@ form .btn {
 
 /**------------- END OF CONTACT SECTION -------------**/
 
-/**------------- FOOTER SECTION -------------**/
+/**--------------- FOOTER SECTION ---------------**/
 
 .footer {
     text-align: center;
@@ -362,13 +358,15 @@ form .btn {
 /**------------- MEDIA QUERY FOR SMALL DEVICE -------------**/
 
 @media only screen and (max-width: 600px) {
+
     nav,
     .container, 
-    .facts_heading .text, 
-    .brand_heading .text, 
     .figure > img, 
     form input[type="text"] {
         width: 100%;
+    }
+    .note > p {
+        width: fit-content;
     }
     h2.heading {
         font-size: 34px;
@@ -383,7 +381,7 @@ form .btn {
     .facts_heading .text, 
     .brand_heading .text {
         font-size: 20px;
-        width: 550px;
+        width: 320px;
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
@@ -391,7 +389,7 @@ form .btn {
     .features {
         display: flex;
         flex-direction: column-reverse;
-        padding: 80px 20px;
+        padding: 80px 0;
     }
     .faqs, .features {
         grid-template-columns: repeat(1, 1fr);
@@ -406,13 +404,14 @@ form .btn {
         font-size: 50px;
     }
     .achievements_cards, .gallery {
-        grid-template-columns: repeat(2, 1fr);
-        column-gap: 15px;
+        grid-template-columns: 1fr;
+        row-gap: 20px;
     }
     .brand_logo {
         display: grid;
-        grid-template-columns: repeat(2,1fr);
-        row-gap: 20px; 
+        grid-template-columns: 1fr;
+        justify-items: center;
+        row-gap: 40px; 
         margin-bottom: 80px;
     }
     .banner_info h1 {
@@ -422,7 +421,7 @@ form .btn {
         padding: 0 15px 20px;
     }
     .brand_logo > img {
-        width: 80%;
+        width: 70%;
     }
     .contact {
         padding-bottom: 30px;
@@ -454,29 +453,39 @@ form .btn {
         padding: 36px 0;
     }
 }
+
 /**------------- END OF MEDIA QUERY FOR SMALL DEVICE -------------**/
 
-/**------------ MEDIA QUERY FOR TABLET DEVICES ----------**/
+/**------------ MEDIA QUERY FOR TABLET DEVICES ------------------**/
+
 @media only screen and (max-width: 992px) {
+
     body {
         overflow-x: hidden;
     }
     .container,
-    .figure > img,
-    .facts_heading .text, 
-    .brand_heading .text {
+    .figure > img {
         width: 100%;
     }
     .faqs {
         grid-template-columns: 1fr;
-    }
-    .achievements_cards {
-        column-gap: 20px;
-    }
+    } 
+    /* .experience {
+    top: -10px;
+    left: 0;
+    margin: 0 auto;
+    margin-bottom: 70px;
+    } */
     .brand_logo > img {
-        width: 150px;
+        width: 125px;
     }
-    .faq_image img {
+    .faq_image > img {
         margin-bottom: 40px;
     }
+    /* .contact_aside {
+        bottom: 75px;
+        margin: -30px;
+    } */
 }
+
+/**------------ END OF MEDIA QUERY FOR TABLET DEVICES ------------------**/
