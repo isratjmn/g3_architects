@@ -146,7 +146,7 @@ nav > ul {
     object-fit: cover;
 }
 .gallery_note {
-    padding-left: 0;
+    padding-left: 12px;
 }
 .gallery_note .heading {
     font-weight: 500;
